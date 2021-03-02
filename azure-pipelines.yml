@@ -58,4 +58,4 @@ steps:
     azureSubscription: 'Visual Studio Enterprise (Testing-2) (605729a6-e1d5-474e-ba84-55239e4b0bf2)'
     appType: 'webApp'
     WebAppName: 'ustestmvccust'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(build.artifactstagingdirectory)/*.zip'
