@@ -13,6 +13,8 @@ variables:
   Solution: '**/*.sln'
   BuildPlatform: 'Any CPU'
   BuildConfiguration: 'Release'
+  ArtifactName: 'drop'
+
 
 steps:
 - task: NuGetToolInstaller@0
