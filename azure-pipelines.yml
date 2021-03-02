@@ -52,3 +52,10 @@ steps:
     PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: '$(ArtifactName)'
   condition: succeededOrFailed()
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Visual Studio Enterprise (Testing-2) (605729a6-e1d5-474e-ba84-55239e4b0bf2)'
+    appType: 'webApp'
+    WebAppName: 'ustestmvccust'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
